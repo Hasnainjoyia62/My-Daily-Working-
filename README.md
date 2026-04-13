@@ -14,9 +14,9 @@ Welcome to my daily coding journey! Is repository mein main apni rozana ki codin
 - Photoshop (for Web Mockups)
 
  📈 Progress Log
-| Date | Task / Topic | Status |
-| :--- | :--- | :--- |
+| **Date**       | **Task / Topic**                     |**status** |
 | 13-04-2026 | Repository Setup & Initial Files | Completed ✅ |
+| 13-04-2026 | Add professional hero section with glassmorphism | Completed ✅ |
 | | | |
 
 ---
