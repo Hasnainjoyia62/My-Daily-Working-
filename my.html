@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator | Hasnain Developer</title>
+   
+</head>
+<body>
+
+    <div class="card">
+        <h1>Grade Calculator</h1>
+        <p class="subtitle">Enter your marks to see your performance.</p>
+
+        <div class="input-group">
+            <label for="Sno">Enter Your Marks (0-100)</label>
+            <input type="number" id="Sno" placeholder="e.g. 85">
+        </div>
+
+        <div class="input-group">
+            <label for="result">Your Result</label>
+            <input type="text" id="result" placeholder="--" readonly>
+        </div>
+
+        <button type="button" onclick="Check()">Check Grade</button>
+
+        <p style="margin-top: 1.5rem; font-size: 0.75rem; color: #b2bec3;">
+            Developed by Hasnain Developer
+        </p>
+    </div>
+
+    <script>
+        function Check() {
+            // Get the input value
+            var marksInput = document.getElementById("Sno").value;
+            
+            // Validation: Check if input is empty
+            if (marksInput === "") {
+                alert("Please enter your marks first!");
+                return;
+            }
+
+            var per = Number(marksInput);
+            var resultField = document.getElementById("result");
+
+            // Logic for Grades
+            if (per > 100 || per < 0) {
+                resultField.value = "Invalid Score";
+                resultField.style.color = "red";
+            } 
+            else if (per >= 90) {
+                resultField.value = "A+";
+                resultField.style.color = "#00b894";
+            } 
+            else if (per >= 80) {
+                resultField.value = "A";
+                resultField.style.color = "#00b894";
+            } 
+            else if (per >= 70) {
+                resultField.value = "B+";
+                resultField.style.color = "#0984e3";
+            } 
+            else if (per >= 50) {
+                resultField.value = "B";
+                resultField.style.color = "#0984e3";
+            } 
+            else {
+                resultField.value = "Fail";
+                resultField.style.color = "#d63031";
+            }
+        }
+    </script>
+</body>
+</html>
