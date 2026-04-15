@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+
+
+
+</head>
+
+<body>
+    <h1>While loop and Do-loop</h1>
+    <p>While loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean
+        condition. The while loop can be thought of as a repeating if statement. The syntax of a while loop in Python
+        is:</p>
+
+
+    <input type="text" id="text" placeholder="Enter A Number">
+    <button onclick="getvalue()">Check </button>
+    <table border="1" id="table" WIDTH="30%" CELLPADDING="4" CELLSPACING="0" ALIGN="center" BGCOLOR="#f2f2f2">
+    </table>
+    <script>
+        function getvalue() {
+            let text = document.getElementById("text").value;
+            let table = document.getElementById("table");
+
+            // Purana table aur heading clear karein
+            table.innerHTML = "";
+
+            // 1. Table ki heading (Caption) create karein
+            let caption = table.createCaption();
+            caption.innerHTML = "<strong>Table of " + text + "</strong>";
+            caption.style.fontSize = "20px"; // Optional: Heading thodi badi dikhane ke liye
+            caption.style.marginBottom = "10px";
+            caption.style.color = "red"; // Optional: Heading ka color set karne ke liye
+            caption.style.borderBottom = "2px solid #333"; // Optional: Heading ke neeche border add karne ke liye
+
+            for (let i = 1; i <= 10; i++) {
+                let row = table.insertRow();
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+                let cell3 = row.insertCell(2);
+                let cell4 = row.insertCell(3);
+                let cell5 = row.insertCell(4);
+
+                cell1.innerHTML = text;
+                cell2.innerHTML = "x";
+                cell3.innerHTML = i;
+                cell4.innerHTML = "=";
+                cell5.innerHTML = text * i;
+            }
+        }
+    </script>
+</body>
+
+</html>
